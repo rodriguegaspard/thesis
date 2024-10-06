@@ -1,6 +1,16 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
 \usepackage{graphicx} % Support for including graphics
+\usepackage{mathptmx} % Set font to Times New Roman
+\usepackage{geometry} % Margins
+
+\geometry{
+  a4paper,
+  left=35mm,
+  right=30mm,
+  top=30mm,
+  bottom=30mm
+}
 
 \title{Efficient vision-based hand gesture recognition on low-power devices}
 \author{Rodrigue GASPARD}
@@ -15,12 +25,91 @@
 \end{abstract}
 
 \section{Introduction}
-With the democratization of handheld devices, smart home appliances,  virtual and augmented reality environments, new ways to interact with technology have emerged. 
+
+\subsection{Problem statement}
+
+With the democratization of handheld devices, smart home appliances,  virtual and augmented reality environments, and the emphasis on accessibility in software development, new ways to interact with technology are required in order to bridge the gap between man and machine, and to capitalize on the portable access of these devices. 
+
+Several methods and technologies aims to tackle this issue, such as voice-assist, motion capture, gesture recognition, eye-tracking technology, and so on. 
+
+However, compared to traditional computer peripherals, those often requires specific hardware requirements, extensive data as well as complex and resource-intensive algorithms. For facial or hand-gesture recognition, a graphical processing unit is often necessary for real-time applications. Unfortunately, this increase manufacturing costs significantly, and requires more power, the latter being a heavy constraint for embedded devices, single-board computers and other low-power devices.
+Thus, optimizing existing algorithms for CPU-only environments might allow those devices to perform more tasks and make them more accessible. Most research done on those algorithms use powerful GPUs in order to drastically increase performance and reduce training time, sometimes by several orders of magnitude. As a result, this creates a research gap when it comes of benchmarking deep-learning models on CPU-only environments.
+
+Thus, this paper will explore the performances increases between various optimization techniques for vision-based hand gesture detection convolutional neural network models on CPU-only environments, in order to highlight where the focus should be when implementing such systems.  
+
 \subsection{Background}
+
+To interface with machines, humans have used a plethora of peripherals of techniques in the past. The keyboard, which is straightforward and was already familiar to users as it used for typewriters and pointer devices such as the computer mouse. Then came remote controllers, either by radio or infrared signals, or by Bluetooth/Wi-Fi technology, which allows more freedom of movement to the user, instead of being constrained to the close locality of the machine being used.
+
+However, those methods often required some kind of training from the user in order to be able to use the machine. The idea of controlling devices remotely using body language or voice commands, which offers both flexibility and user-friendliness compared to the previously mentioned techniques, became a viable option around the end of the century.
+A notable example for voice recognition was Dragon NaturallySpeaking, a proprietary software recognition package released by Dragon Systems in 1996, which was one of the first voice assistants available to the public, and allowed for continuous recognition.
+For hand/body gesture recognition, the Microsoft Kinect 
+
+- History of pattern recognition and hand gesture languages (refer to book)
+
+\subsection{Research objective}
+
+The objective of this research is to compare various optimization techniques for convolutional neural networks regarding vision-based hand gesture recognition for CPU-only environments.
+Specifically, the optimizations techniques that will be tested are :
+
 \subsection{Motivation}
 
+Single board computers (or SBCs) are complete computers built on a single circuit board, integrating components like processor, memory, and storage. They are compact, cost-effective, and easy to integrate into various applications. Some notorious examples are the Raspberry Pi series, or the Arduino series, which are most commonly used for embedded devices, such as home security, weather stations or small drones.
+
+These devices gained popularity during the last decade due to the aforementioned benefits, fostering a rich and active community of developers, and created many popular community projects such as the CinePi, which is a opensource high-end cinema camera using a Raspberry Pi, % List some more projects 
+
+\section{Literature review}
+
+ \subsection{Research methodology}
+
+ - Research methodology, selection criteria and resources used for reproducability
+
+ - Keywords = "real-time", "low-power", "hand gesture recognition", "image recognition", "vision-based"
+
+ - General overview of knowledge gained for the papers, with proper citations
+
+ \subsection{Data acquisition}
+
+ - Choice of sensor and why
+
+ For vision-based detector using a standard camera, the detection can be simplified if we can assume the hand covers most of the screen and is easily distinguishable for its surrondings by its color, for example using the YCbCr skin detection algorithm ~\cite{AIBINU20121183}.
+ However, in real-life situations you cannot expect for this to always be the case (for example: the user might put his hand in front of his face, or be in front of someone's else).
+ Some papers recommend the use of sensors with depth perception capabilities (either stereo cameras, or cameras with IR sensors providing a depth map/image such as RGB-D cameras) to circumvent this issue. ~\cite{sahoo2022real}
+
+ \subsection{Preprocessing}
+
+ - Describing the methods
+
+ For real-time applications, feature extraction is very important as you want to exclude anything that's not necessary for image recognition
+
+ \subsection{Recognition}
+
+ This paper proposed by Sahoo et al. ~\cite{sahoo2022real} seems to suggest that developing a CNN from scratch might be too tedious, time-consuming, and have diminishing returns compared to fine-tuning a pre-existing image classification model to focus on hand gesture detection. The proposed techniques achieved between 5.85\% and 8.01\% increase in mean accuracy compared to 
+
+\subsection{Research gaps}
+
+- No specific research on vision-based HGR for CPU-only environments
+
+- No particular study explores the possible differences between various processor architectures (Intel, AMD)
+
 \section{Methodology}
+
 \subsection{Experiment design}
+
+- Hardware used in detail
+
+- Define each project, Julia and Python
+
+- Libraries used
+ 
+- Optimization techniques tested
+
+- Testing procedure
+
+The projects will be benchmarked on both Intel and AMD processors, particularly a Dell Latitude 7490 (Intel i5-8350U with 8 cores @ 3.6 GHz) and a Raspberry Pi Model B (Quad core Cortex-A72 ARM v8 64-bit SoC @ 1.8GHz), in order to gauge the impacts of each optimization techniques on both architectures.
+
+The results will then be compared to pre-trained general object detection models such as YOLOv3.
+
 \subsection{Data extraction}
 
 \section{Results}
