@@ -28,6 +28,9 @@
   GPU = graphical processing unit
   EMG = Electromyography
   SBC = Single-board computer
+  IoT = Internet of Things
+  ToF = Time of Flight
+  IR = Infrared
 
   \begin{abstract}
     This is the abstract
@@ -104,11 +107,31 @@
   CPUs comes in different core architectures, which is the underlying design and structure of a CPU's processing core, which is responsible for executing instructions and performing computations in a computer. Different core architecture have different instruction set architectures (ISAs) and optimizations and special support for AI-specific instructions. The ISA defines the set of instructions the CPU can execute, such as arithmetic operations (add, subtract, etc.), memory operations (load, store), and control operations (branching). Common ISAs include x86, used by Intel and AMD processors, and ARM, used in mobile devices and some SBCs such as the Raspberry Pi.
   Intel processors usually have better single-core performance than AMD processors, but they also have special features such as DL Boost. Deep Learning Boost (DL Boost) introduced in recent Intel processors is designed to accelerate AI workloads, especially inference, by optimizing low-precision calculations (INT8). This feature is useful in speeding up inferencing for ML models like neural networks.
   On the other hand, AMD usually offer more cores and threads at a lower price point than Intel, and are often the choice for embedded or mobile devices. More cores can be helpful when training ML models, especially for large datasets and parallelized workloads. AMD does not have a direct analog to Intel's DL Boost, however.
- 
+
+  \subsection{Motivation}
+
+  Single board computers (or SBCs) are complete computers built on a single circuit board, integrating components like processor, memory, and storage. They are compact, cost-effective, and easy to integrate into various applications. Some notorious examples are the Raspberry Pi series, or the Arduino series, which are most commonly used for embedded devices, such as home security, weather stations or small drones.
+  These devices gained popularity during the last decade due to the aforementioned benefits, fostering a rich and active community of developers, and created many popular community projects such as the CinePi, which is a open source high-end cinema camera using a Raspberry Pi ~\cite{CINEPI} or the Pi-Hole, which is a network-wide ad and tracker blocker ~\cite{PIHOLE}.
+
+  Pairing vision-based hand gesture recognition to single-board computers and other embedded devices offers a lot of advantages compared to other human-machine interfaces such as a keyboard or wireless mouse.
+  First, single-board computers are compact, and often needs to remain so making vision-based gesture-controlled systems portable and easy to integrate, as it only requires a camera which may already be part of the setup (in the case of smartphones for example). There is no need to add extra hardware in most cases, whereas keyboards, mouses and other peripherals are very often not included in a basic SBC setup, and are often more cumbersome than the computer itself.
+  A typical camera will usually cost around the same as a keyboard and mouse combination. Taking the Raspberry Pi for example, with the Raspberry Pi Camera Module 3 : The standard version (12MP) is around \$25–\$35, the wide (12MP, with a wider field of view) is around \$35–\$45, and finally, with autofocus or noIR (infrared for night vision), it is slightly higher in price, around \$30–\$45, depending on the configuration. These prices may vary depending on the retailer, shipping costs, and region. Online platforms like Amazon, Shopee, or official Raspberry Pi resellers usually stock these products.
+  The price range for a wireless keyboard or mouse combo is around \$20-\$40 for a very basic setup, which is arguably more cumbersome to use, and each device needs to be recharged individually. The keyboard (and even the mouse in most cases) is very often bigger than the SBC itself, so the portability of the setup is dramatically reduced.
+  Furthermore, Open-source platforms like Raspberry Pi allow for extensive customization, making them ideal for DIY projects, experimentation, and specialized applications. If designed properly, it would be easy to customize HGR software to map new commands to new or existing hand gestures, making it very flexible and adaptable to the user. Leveraging low-cost hardware, these systems can be employed in both hobbyist and professional environments, creating solutions that are affordable, portable, and often energy-efficient.
+
+  Hand gesture recognition holds significant promise in improving accessibility for individuals with disabilities, particularly those who have difficulties with traditional input devices like keyboards or touchscreens.
+  This technology might be more suited for elderly people and people suffering from age-related mobility or coordination challenges. As motor skills decline with age, larger and simpler gestures can be easier than using small keycaps or touchscreens.
+  Pain and limited dexterity from arthritis make precise movement difficult and painful, but gestures can be a simpler alternative. For people with movement disorders that involve tremors or unintentional movements, gesture recognition can be adapted and can differentiate between intentional movements and tremors, allowing individuals to control devices without false inputs.
+  Individuals with cognitive disabilities, including those who may struggle with traditional interfaces, can benefit from gesture-based interaction, which can be more intuitive and accessible. Some individuals on the autism spectrum, especially when nonverbal, may find gestures easier to use for communication and interaction compared to text or speech-based systems, and it can also be useful for individuals struggling with dyslexia or other learning disabilities. HGR can provide alternative input methods that reduce reliance on written or typed text, making digital interaction more accessible.
+  HGR can also be made to recognize sign language and translate it into spoken or written communication, bridging the gap between deaf individuals and those who don’t know sign language.
+
+  Vision-based hand gesture recognition also offers some interesting ventures and possible applications that can extend the usefulness of single-board computers and other embedded devices. Hand gestures can be used to control various IoT devices such as lighting or air conditioning. For example, waving your hand can turn lights on/off ,adjust brightness or activate remotely several smart home appliances such as ovens or laundry machines, providing a seamless way to interact with home automation systems. Possible uses can extend outside homes, and into security systems. SBCs can be used to enable gesture-based access control, such as unlocking doors or triggering alarms based on specific hand movements. Users could control TVs, projectors, or audio systems through gestures, for example by swiping left or right to change tracks or adjusting the volume by moving the hand up or down. Finally, In industrial settings, hand gesture recognition can allow workers to interact with cobots, instructing them to perform specific tasks through simple gestures, enhancing efficiency and safety. Cobots, or collaborative robots, are robots designed to work alongside humans in shared workspaces, assisting with tasks while ensuring safety through sensors and other safety features. They are typically used to enhance efficiency in industries like manufacturing without replacing human workers.
+
   \subsection{Research objective}
 
   This research will try to answer several questions related to vision-based hand-gesture recognition on CPU-only, or CPU-focused environments, that will hopefully lead to further research and development on this topic.
-  First, this paper will compare various optimization techniques for convolutional neural networks, in order to improve both time complexity and detection accuracy, as well as faster detection speeds which will be essential for real-time applications. 
+  - CNN of SVM?
+
   - Details on the optimization techniques
 
   - Explore differences between sensors
@@ -116,16 +139,6 @@
 
   - Difference between chip architectures
   Finally, I will try to highlight the subtleties and possible optimizations and performance gains between two different CPU microarchitectures, namely the Intel CPU microarchitecture and the AMD CPU microarchitecture. 
-
-  \subsection{Motivation}
-
-  Single board computers (or SBCs) are complete computers built on a single circuit board, integrating components like processor, memory, and storage. They are compact, cost-effective, and easy to integrate into various applications. Some notorious examples are the Raspberry Pi series, or the Arduino series, which are most commonly used for embedded devices, such as home security, weather stations or small drones.
-
-  These devices gained popularity during the last decade due to the aforementioned benefits, fostering a rich and active community of developers, and created many popular community projects such as the CinePi, which is a opensource high-end cinema camera using a Raspberry Pi ~\cite{CINEPI}, % List some more projects 
-
-  - being able to interact with simple software for the raspberry pi
-
-  -
 
   \section{Literature review}
 
@@ -162,15 +175,19 @@
 
   \subsection{Preprocessing}
 
+  This step helps prepare the raw visual data for gesture classification, ensuring that the model can efficiently recognize gestures with greater accuracy. It removes noise, distortions, or irrelevant information to make the data cleaner and more reliable for further processing, it simplifies the input data to reduce computational load and make pattern recognition easier and standardizes the input to ensure consistent and reliable feature extraction, leading to better recognition performance.
+
   - Image grayscaling = convert RGB into grayscale to get the luminance value of the pixel, used to make preprocessing easier down the line and reduce overall time and space complexity
 
-  The main objective of the preprocessing step for hand gesture recognition is to segment the hand region, resize the image to an appropriate size and normalize the pixel values
+  The main objective of the preprocessing step for hand gesture recognition is to segment the hand region, resize the image to an appropriate size and normalize the pixel values.
 
   - Describing the methods
 
   For real-time applications, feature extraction is very important as you want to exclude anything that's not necessary for image recognition
 
-  \subsection{Recognition}
+  \subsection{Gesture recognition and classification}
+
+  Gesture classification is the process of identifying and categorizing specific hand movements into predefined gesture classes or categories. 
   - machine learning vs deep learning
 
   - Several methods exist to detect the hand : by skin-color, by edge, using depth, using deeplearning..
