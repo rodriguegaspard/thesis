@@ -251,14 +251,16 @@ This paper proposed by Sahoo et al. ~\cite{sahoo2022real} seems to suggest that 
 
 \subsection{Experiment design}
 
-This experiment will consist of benchmarking the same convolutional neural network written in Python on separate hardware, and with or without various optimization techniques.
+This experiment will consist of benchmarking several Keras convolutional neural networks written in Python, varying in datasets used for training, optimization and detection techniques. Those convolutional neural networks will also be benchmarked on different hardware, namely a mid-range Dell Latitude laptop and a Raspberry Pi Model 4B, in order to highlight the possible differences in accuracy or overall performance between the two architectures, and the practicality of running local deep learning networks for hand gesture detection on low-power devices, in real time.
 
-The Python project will make use of TensorFlow library, the pandas library, the sci-kit library as well as the MatPlotLib library for graph plotting.
+The Python project will make use of TensorFlow library, the pandas library, the sci-kit library as well as the MatPlotLib library for graph plotting. In order to test performances over a live webcam feed, OpenCV will also be used.
 (describe each lib precisely and provide links)
 
 - Define each project, Julia and Python (Do I have the time for Julia?)
 
 - Preprocessing with the precise actions
+
+- Many different models will be pre-trained with different configurations?
 
 - Architecture of the model used, with explanation for each layer
 
