@@ -233,6 +233,10 @@ Gesture classification is the process of identifying and categorizing specific h
 
 This paper proposed by Sahoo et al. ~\cite{sahoo2022real} seems to suggest that developing a CNN from scratch might be too tedious, time-consuming, and have diminishing returns compared to fine-tuning a pre-existing image classification model to focus on hand gesture detection. The proposed techniques achieved between 5.85\% and 8.01\% increase in mean accuracy compared to similar models.
 
+\subsection{Object detection}
+
+Highlight the various techniques to detect patterns (objects) in larger images
+
 \subsection{Training}
 
 -Talk about dataset
@@ -251,9 +255,20 @@ This paper proposed by Sahoo et al. ~\cite{sahoo2022real} seems to suggest that 
 
 \subsection{Experiment design}
 
-This experiment will consist of benchmarking several Keras convolutional neural networks written in Python, varying in datasets used for training, optimization and detection techniques. Those convolutional neural networks will also be benchmarked on different hardware, namely a mid-range Dell Latitude laptop and a Raspberry Pi Model 4B, in order to highlight the possible differences in accuracy or overall performance between the two architectures, and the practicality of running local deep learning networks for hand gesture detection on low-power devices, in real time.
+This experiment will consist of benchmarking several pre-trained KerasCV convolutional neural networks, varying in datasets used for training, optimization and detection techniques. Those convolutional neural networks will also be benchmarked on different hardware, namely a mid-range Dell Latitude laptop and a Raspberry Pi Model 4B, in order to highlight the possible differences in accuracy or overall performance between the two architectures, and the practicality of running local deep learning networks for hand gesture detection on low-power devices, in real time.
 
-The Python project will make use of TensorFlow library, the pandas library, the sci-kit library as well as the MatPlotLib library for graph plotting. In order to test performances over a live webcam feed, OpenCV will also be used.
+The Python project will make use of several libraries. Here's a detailed breakdown of each major library used for the project:
+\begin{itemize}
+  \item TensorFlow
+  \item Keras
+  \item KerasCV
+  \item OpenCV, used for live camera feed and image preprocessing.
+  \item MatPlotLib
+  \item sci-kit (?)
+  \item pandas (?)
+\end{itemize}
+
+TensorFlow library, the pandas library, the sci-kit library as well as the MatPlotLib library for graph plotting. In order to test performances over a live webcam feed, OpenCV will also be used.
 (describe each lib precisely and provide links)
 
 - Define each project, Julia and Python (Do I have the time for Julia?)
