@@ -1,0 +1,96 @@
+\begin{thebibliography}{10}
+
+\bibitem{afifi201911kHands}
+Mahmoud Afifi.
+\newblock 11k hands: gender recognition and biometric identification using a
+  large dataset of hand images.
+\newblock {\em Multimedia Tools and Applications}, 2019.
+
+\bibitem{AIBINU20121183}
+A.M. Aibinu, A.A. Shafie, and M.J.E. Salami.
+\newblock Performance analysis of ann based ycbcr skin detection algorithm.
+\newblock {\em Procedia Engineering}, 41:1183--1189, 2012.
+\newblock International Symposium on Robotics and Intelligent Sensors 2012
+  (IRIS 2012).
+
+\bibitem{CHEN2003745}
+Feng-Sheng Chen, Chih-Ming Fu, and Chung-Lin Huang.
+\newblock Hand gesture recognition using a real-time tracking method and hidden
+  markov models.
+\newblock {\em Image and Vision Computing}, 21(8):745--758, 2003.
+
+\bibitem{rikitagiridhar}
+RITIKA GIRIDHAR.
+\newblock Hand gestures dataset.
+\newblock
+  \url{https://www.kaggle.com/datasets/ritikagiridhar/2000-hand-gestures},
+  2021.
+
+\bibitem{imsparsh}
+Sparsh Gupta.
+\newblock Gesture recognition.
+\newblock \url{https://www.kaggle.com/datasets/imsparsh/gesture-recognition},
+  2020.
+
+\bibitem{he2021automl}
+Xin He, Kaiyong Zhao, and Xiaowen Chu.
+\newblock Automl: A survey of the state-of-the-art.
+\newblock {\em Knowledge-based systems}, 212:106622, 2021.
+
+\bibitem{kim2016hand}
+Youngwook Kim and Brian Toomajian.
+\newblock Hand gesture recognition using micro-doppler signatures with
+  convolutional neural network.
+\newblock {\em IEEE Access}, 4:7125--7130, 2016.
+
+\bibitem{LEAPMOTION}
+Leap.
+\newblock Leap motion controller 2 official page.
+\newblock \url{https://leap2.ultraleap.com/products/leap-motion-controller-2}.
+
+\bibitem{li2019hand}
+Gongfa Li, Heng Tang, Ying Sun, Jianyi Kong, Guozhang Jiang, Du~Jiang, Bo~Tao,
+  Shuang Xu, and Honghai Liu.
+\newblock Hand gesture recognition based on convolution neural network.
+\newblock {\em Cluster Computing}, 22:2719--2729, 2019.
+
+\bibitem{qi2024computer}
+Jing Qi, Li~Ma, Zhenchao Cui, and Yushu Yu.
+\newblock Computer vision-based hand gesture recognition for human-robot
+  interaction: a review.
+\newblock {\em Complex \& Intelligent Systems}, 10(1):1581--1606, 2024.
+
+\bibitem{sahoo2022real}
+Jaya~Prakash Sahoo, Allam~Jaya Prakash, Pawe{\l} P{\l}awiak, and Saunak
+  Samantray.
+\newblock Real-time hand gesture recognition using fine-tuned convolutional
+  neural network.
+\newblock {\em Sensors}, 22(3):706, 2022.
+
+\bibitem{savant2014review}
+Shubhashree Savant.
+\newblock A review on edge detection techniques for image segmentation.
+\newblock {\em International Journal of Computer Science and Information
+  Technologies}, 5(4):5898--5900, 2014.
+
+\bibitem{CINEPI}
+schoolpost.
+\newblock Cinepi github page.
+\newblock \url{https://github.com/schoolpost/CinePI}.
+
+\bibitem{PIHOLE}
+The Pi-Hole Team.
+\newblock Pi-hole official website.
+\newblock \url{https://pi-hole.net/}.
+
+\bibitem{ultralytics}
+Ultralytics Team.
+\newblock Ultralytics.
+\newblock \url{https://www.ultralytics.com/}, 2024.
+
+\bibitem{DBLP}
+Hongyi Zhang, Moustapha Ciss{\'{e}}, Yann~N. Dauphin, and David Lopez{-}Paz.
+\newblock mixup: Beyond empirical risk minimization.
+\newblock {\em CoRR}, abs/1710.09412, 2017.
+
+\end{thebibliography}
